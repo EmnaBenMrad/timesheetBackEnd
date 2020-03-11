@@ -120,7 +120,6 @@ public class ProjectRoleController {
   void deleteProjet(@PathVariable Double idRole) {
     Optional<Projectrole> updatedPerson = projectRoleRepository.findById_role(idRole);
     projectRoleRepository.deleteById(updatedPerson.get().getId());
-    //projectRoleRepository.deleteById_role(idRole);
 
   }
 }
