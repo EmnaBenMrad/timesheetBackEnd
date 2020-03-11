@@ -117,16 +117,6 @@ public class ProjectRoleController {
   }
 
 
-  //  @DeleteMapping("/delete/{ID}")
-//  public String delete(@PathVariable Double ID) throws Exception {
-//    System.out.println("aaaaaaaaaa");
-//    return projectRoleRepository.findById(ID)
-//      .map(order -> {
-//        projectRoleRepository.delete(order);
-//        return ("Order deleted successfully22");
-//      }).orElseThrow(() -> new Exception("Order not found with ref " + ID));
-//  }
-//
   @RequestMapping(value = "/delete/{idRole}", method = RequestMethod.DELETE)
   void deleteProjet(@PathVariable Double idRole) {
     Optional<Projectrole> updatedPerson = projectRoleRepository.findById_role(idRole);
