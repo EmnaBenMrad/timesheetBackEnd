@@ -111,7 +111,6 @@ public class ProjectRoleController {
   public String update(@PathVariable(value = "ID") Double id, @RequestBody Projectrole projectrole) {
     // logger.debug("Updating employee with employee-id= {}.", id);
     projectrole.setId_role(id);
-    //e.setId(id);
     projectRoleService1.updateProjectRole(projectrole);
     return "role record for role-id= " + id + " updated.";
   }
