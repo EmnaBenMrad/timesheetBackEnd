@@ -42,14 +42,7 @@ public class ProjectRoleController {
 
   @RequestMapping(value = "/addProjectRole", method = RequestMethod.POST)
   Projectrole addProjectRole(@RequestBody Projectrole pro) {
-    //  logger.info("processing authentication for '{}'", "list articles");
-    // Projectrole addedProjectRole= projectRoleRepository.save(pro);
-    //return addedProjectRole;
-    //return projectRoleRepository.save(pro);
     Projectrole i = new Projectrole();
-    //i.setId(ObjectId.get());
-    ///i.setId_role(sequenceService.getNextSequenceId());
-    // i.setId(sequenceDao.getNextSequenceId(HOSTING_SEQ_KEY));
     i.setId_role(projectRoleService1.getNext());
     i.setName(pro.getName());
     i.setDescription(pro.getDescription());
