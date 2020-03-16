@@ -22,6 +22,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*")
 //@RequestMapping(value = "/imputation")
 public class ImputationController {
   @Autowired
