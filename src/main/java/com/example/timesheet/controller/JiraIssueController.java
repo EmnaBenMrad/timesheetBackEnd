@@ -25,7 +25,7 @@ public class JiraIssueController {
 
   @GetMapping("/read2")
   public List<Jiraissue> read() {
-   
+
     //System.out.println("aaaaaa"+jiraIssueRepository.findById((long) 10003));
     return jiraIssueRepository.findAll();
     //return jiraIssueService.getAll();
