@@ -29,8 +29,8 @@ public class ProjectRoleService {
   public Double getNext() {
     //Projectrole last = projectRoleRepository.findTopByOrderByIdDesc();
     Projectrole last = projectRoleRepository.findTopByOrderById_roleDesc();
-    Double lastNum = last.getId_role();
+    Double lastNum = last.getIdRole();
     Projectrole next = new Projectrole(lastNum + 1);
-    return next.getId_role();
+    return next.getIdRole();
   }
 }

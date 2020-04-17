@@ -22,12 +22,12 @@ public class Projectrole {
   @Id
   private String id;
   //@Indexed
-  private Double id_role;
+  private Double idRole;
   private String name;
   private String description;
 
-  public Projectrole(Double id_role) {
-    this.id_role = id_role;
+  public Projectrole(Double idRole) {
+    this.idRole = idRole;
   }
 
   public Projectrole() {
@@ -42,12 +42,12 @@ public class Projectrole {
 //  }
 
 
-  public Double getId_role() {
-    return id_role;
+  public Double getIdRole() {
+    return idRole;
   }
 
-  public void setId_role(Double id_role) {
-    this.id_role = id_role;
+  public void setIdRole(Double idRole) {
+    this.idRole = idRole;
   }
 
   public String getId() {
@@ -78,7 +78,7 @@ public class Projectrole {
   public String toString() {
     return "Projectrole{" +
       "id='" + id + '\'' +
-      ", id_role=" + id_role +
+      ", idRole=" + idRole +
       ", name='" + name + '\'' +
       ", description='" + description + '\'' +
       '}';

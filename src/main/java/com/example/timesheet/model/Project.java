@@ -17,6 +17,7 @@ public class Project {
   private String pname;
   private String url;
   private String lead;
+  private String description;
   private String pkey;
   private Double pcounter;
   private Double assigneetype;

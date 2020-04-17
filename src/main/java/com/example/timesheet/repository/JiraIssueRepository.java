@@ -15,4 +15,9 @@ public interface JiraIssueRepository extends MongoRepository<Jiraissue, String> 
 
   @Query("{'idIssue': ?0 }")
   Jiraissue findByIdIssue(Double idIssue);
+
+  @Query("{'project': ?0 }")
+  List<Jiraissue> findJiraissuesByProject(Double project);
+
+
 }

@@ -43,7 +43,7 @@ public class ProjectRoleController {
   @RequestMapping(value = "/addProjectRole", method = RequestMethod.POST)
   Projectrole addProjectRole(@RequestBody Projectrole pro) {
     Projectrole i = new Projectrole();
-    i.setId_role(projectRoleService1.getNext());
+    i.setIdRole(projectRoleService1.getNext());
     i.setName(pro.getName());
     i.setDescription(pro.getDescription());
     return projectRoleService1.addProjectRole(i);
@@ -53,8 +53,8 @@ public class ProjectRoleController {
     // Projectrole updateImputation(@RequestBody Projectrole impu) {
   Projectrole updaterole(@RequestBody Projectrole role) {
     Projectrole pro = role;
-    System.out.println("baha" + pro.getId_role());
-    if (pro.getId_role() != null) {
+    System.out.println("baha" + pro.getIdRole());
+    if (pro.getIdRole() != null) {
       return projectRoleRepository.save(pro);
       //return projectRoleService1.updateImputation(role);
     } else {
@@ -67,14 +67,14 @@ public class ProjectRoleController {
     // Projectrole updateImputation(@RequestBody Projectrole impu) {
   Projectrole updateImputation(@RequestBody Projectrole role) throws Exception {
     Optional<Projectrole> pro;
-    pro = projectRoleRepository.findById_role(role.getId_role());
+    pro = projectRoleRepository.findById_role(role.getIdRole());
     if (pro != null) {
       return pro.map(pr -> {
-        pr.setId_role(role.getId_role());
+        pr.setIdRole(role.getIdRole());
         pr.setName(role.getName());
         pr.setDescription(role.getDescription());
         return projectRoleRepository.save(pr);
-      }).orElseThrow(() -> new Exception("order not found with ref " + pro.get().getId_role()));
+      }).orElseThrow(() -> new Exception("order not found with ref " + pro.get().getIdRole()));
       //return projectRoleRepository.save(pro.get());
 //    } else {
 //      //System.out.println("zzzzzzzzzzzzz");
@@ -91,11 +91,11 @@ public class ProjectRoleController {
                                    @Valid @RequestBody Projectrole order) throws Exception {
     Optional<Projectrole> updatedPerson = projectRoleRepository.findById_role(id_role);
 
-    //Optional<Projectrole> updatedPerson = projectRoleRepository.findById(order.getId_role());
+    //Optional<Projectrole> updatedPerson = projectRoleRepository.findById(order.getIdRole());
     System.out.println("aaaa" + updatedPerson.get());
     return updatedPerson
       .map(ordeer -> {
-        // ordeer.setId_role(order.getId_role());
+        // ordeer.setIdRole(order.getIdRole());
         ordeer.setName(order.getName());
         ordeer.setDescription(order.getDescription());
 
@@ -110,7 +110,7 @@ public class ProjectRoleController {
   @PutMapping(value = "/update/{ID}")
   public String update(@PathVariable(value = "ID") Double id, @RequestBody Projectrole projectrole) {
     // logger.debug("Updating employee with employee-id= {}.", id);
-    projectrole.setId_role(id);
+    projectrole.setIdRole(id);
     projectRoleService1.updateProjectRole(projectrole);
     return "role record for role-id= " + id + " updated.";
   }

@@ -8,6 +8,7 @@ import com.example.timesheet.model.Userbase;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface InvAppliUserRoleRepository extends MongoRepository<InvAppliUserRole, String> {
@@ -15,4 +16,7 @@ public interface InvAppliUserRoleRepository extends MongoRepository<InvAppliUser
   @Query("{'project.idProject' : ?0 , 'userbase.idUser' : ?1}")
   InvAppliUserRole findInvAppliUserRoleByProjectIdtAndUserbaseId(Double projectId, Double userbaseId);
 
+  @Query("{ 'userbase.idUser' : ?0}")
+    //List<Project> findProjectsBy
+  List<InvAppliUserRole> findInvAppliUserRolesByUserbase_IdUser(Double idUser);
 }

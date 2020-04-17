@@ -20,7 +20,7 @@ public class Imputation {
   @Id
   private String id;
   private int idImputation;
-  private String Date;
+  private String date;
   private Double imputation;
   private Double raf;
   private int validation;

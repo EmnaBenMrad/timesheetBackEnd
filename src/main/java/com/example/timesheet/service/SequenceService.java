@@ -47,7 +47,7 @@ public class SequenceService {
       }
     }
 
-    return seqId.getId_role();
+    return seqId.getIdRole();
 
   }
 }

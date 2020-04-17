@@ -17,7 +17,6 @@ public class Jiraissue {
   @Id
   private String id;
   private Double idIssue;
-
   private String pkey;
   private Double project;
   private String reporter;

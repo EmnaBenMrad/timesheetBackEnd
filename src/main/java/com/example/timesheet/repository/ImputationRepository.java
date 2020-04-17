@@ -4,6 +4,7 @@ package com.example.timesheet.repository;
 import com.example.timesheet.model.Imputation;
 import com.example.timesheet.model.Projectrole;
 import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.repository.DeleteQuery;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.data.repository.query.QueryByExampleExecutor;
@@ -20,5 +21,9 @@ public interface ImputationRepository extends MongoRepository<Imputation, String
 
   @Query("{'idImputation': ?0 }")
   Imputation findByIdImputation(int idImputation);
+
+  //@Query("{'idImputation': ?0 }")
+  @DeleteQuery
+  void deleteByIdImputation(int idImputation);
 
 }

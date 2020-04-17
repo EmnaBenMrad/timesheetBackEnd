@@ -59,7 +59,7 @@ public class ImputationController {
   @ApiOperation(value = "Create a new imputation")
   @ResponseStatus(HttpStatus.OK)
   @RequestMapping(value = "/addImputation2", method = RequestMethod.POST)
-  Imputation addImputation2(@RequestBody Imputation imp) {
+  Imputation addImputation(@RequestBody Imputation imp) {
     logger.info("processing authentication for '{}'", "list articles");
     Imputation imputation = new Imputation();
     imputation.setIdImputation(imputationService.getNext());
@@ -84,8 +84,8 @@ public class ImputationController {
   @ApiOperation(value = "Update an existing imputation")
   @ResponseStatus(HttpStatus.OK)
   @PutMapping("/imputationUpdate/{idImputation}")
-  public Imputation updateProduct(@PathVariable int idImputation,
-                                  @Valid @RequestBody Imputation impuationRequest) throws Exception {
+  public Imputation updateImputation(@PathVariable int idImputation,
+                                     @Valid @RequestBody Imputation impuationRequest) throws Exception {
     Imputation updatedImputation = imputationRepository.findByIdImputation(idImputation);
     updatedImputation.setImputation(impuationRequest.getImputation());
     return imputationRepository.save(updatedImputation);
@@ -96,7 +96,7 @@ public class ImputationController {
   @RequestMapping(value = "/deleteImputation/{idImputation}", method = RequestMethod.DELETE)
   void deleteImputation(@PathVariable int idImputation) {
     Imputation deletedImputation = imputationRepository.findByIdImputation(idImputation);
-    imputationRepository.deleteById(deletedImputation.getId());
+    imputationRepository.deleteByIdImputation(deletedImputation.getIdImputation());
   }
 
 

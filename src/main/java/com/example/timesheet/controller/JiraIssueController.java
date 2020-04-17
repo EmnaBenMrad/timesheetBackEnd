@@ -9,6 +9,7 @@ import com.example.timesheet.service.ProjectRoleService;
 import com.example.timesheet.service.JiraIssueService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,4 +29,11 @@ public class JiraIssueController {
     return jiraIssueRepository.findAll();
     //return jiraIssueService.getAll();
   }
+
+  @GetMapping("/jiraIssueList/{project}")
+  public List<Jiraissue> jiraIssueList(@PathVariable Double project) {
+    return jiraIssueRepository.findJiraissuesByProject(project);
+  }
+
+
 }
