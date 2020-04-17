@@ -25,7 +25,6 @@ public class Projectrole {
   private Double idRole;
   private String name;
   private String description;
-
   public Projectrole(Double idRole) {
     this.idRole = idRole;
   }
