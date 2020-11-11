@@ -36,54 +36,128 @@
     </dependency>
     <dependency>
       <groupId>io.springfox</groupId>
-      <artifactId>springfox-swagger-ui</artifactId>
-      <version>2.9.2</version>
+        <artifactId>springfox-swagger-ui</artifactId>
+        <version>2.9.2</version>
     </dependency>
 
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <!--<version>1.18.10</version>-->
-      <scope>provided</scope>
-    </dependency>
-    <!--<dependency>-->
-    <!--<groupId>org.projectlombok</groupId>-->
-    <!--<artifactId>lombok</artifactId>-->
-    <!--<optional>true</optional>-->
-    <!--</dependency>-->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-mongodb</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
+      <dependency>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok</artifactId>
+          <!--<version>1.18.10</version>-->
+          <scope>provided</scope>
+      </dependency>
+      <!--<dependency>-->
+      <!--<groupId>org.projectlombok</groupId>-->
+      <!--<artifactId>lombok</artifactId>-->
+      <!--<optional>true</optional>-->
+      <!--</dependency>-->
+      <dependency>
+          <groupId>org.json</groupId>
+          <artifactId>json</artifactId>
+          <version>20090211</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-data-mongodb</artifactId>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-security</artifactId>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-mail</artifactId>
+      </dependency>
+      <!-- Password Validation -->
+      <!-- https://mvnrepository.com/artifact/org.passay/passay -->
+      <dependency>
+          <groupId>org.passay</groupId>
+          <artifactId>passay</artifactId>
+          <version>1.0</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-test</artifactId>
+          <version>2.3.3.RELEASE</version>
+          <scope>test</scope>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-jetty</artifactId>
+      </dependency>
+      <!--<dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt</artifactId>
+        &lt;!&ndash;<version>${jjwt.version}</version>&ndash;&gt;
+      </dependency>-->
+      <!-- <dependency>
+         <groupId>com.auth0</groupId>
+         <artifactId>java-jwt</artifactId>
+        &lt;!&ndash; <version>3.10.3</version>&ndash;&gt;
+       </dependency>-->
+      <!--<dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt</artifactId>
+       &lt;!&ndash; <version>${jjwt.version}</version>&ndash;&gt;
+      </dependency>-->
+      <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+      <!-- <dependency>
+         <groupId>io.jsonwebtoken</groupId>
+         <artifactId>jjwt</artifactId>
+         <version>0.5.1</version>
+       </dependency>-->
+      <!-- https://mvnrepository.com/artifact/com.google.code.findbugs/annotations -->
+      <dependency>
+          <groupId>com.google.code.findbugs</groupId>
+          <artifactId>annotations</artifactId>
+          <version>3.0.1</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/clock-component/clock-component -->
+      <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+      <dependency>
+          <groupId>io.jsonwebtoken</groupId>
+          <artifactId>jjwt</artifactId>
+          <version>0.9.1</version>
+      </dependency>
 
 
-    <!--<dependency>-->
-    <!--<groupId>org.springframework.data</groupId>-->
-    <!--<artifactId>spring-data-mongodb</artifactId>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-    <!--<groupId>org.springframework.boot</groupId>-->
-    <!--<artifactId>spring-boot-starter-data-mongodb</artifactId>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-    <!--<groupId>org.springframework.boot</groupId>-->
-    <!--<artifactId>spring-boot-starter-data-rest</artifactId>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-    <!--<groupId>org.springframework.boot</groupId>-->
-    <!--<artifactId>spring-boot-starter-web</artifactId>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-    <!--<groupId>org.springframework.cloud</groupId>-->
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-web</artifactId>
+      </dependency>
+      <!--<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+      </dependency>-->
+      <!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
+      <!--    <dependency>-->
+      <!--      <groupId>joda-time</groupId>-->
+      <!--      <artifactId>joda-time</artifactId>-->
+      <!--      <version>2.10.6</version>-->
+      <!--    </dependency>-->
+
+
+      <!--<dependency>-->
+      <!--<groupId>org.springframework.data</groupId>-->
+      <!--<artifactId>spring-data-mongodb</artifactId>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+      <!--<groupId>org.springframework.boot</groupId>-->
+      <!--<artifactId>spring-boot-starter-data-mongodb</artifactId>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+      <!--<groupId>org.springframework.boot</groupId>-->
+      <!--<artifactId>spring-boot-starter-data-rest</artifactId>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+      <!--<groupId>org.springframework.boot</groupId>-->
+      <!--<artifactId>spring-boot-starter-web</artifactId>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+      <!--<groupId>org.springframework.cloud</groupId>-->
     <!--<artifactId>spring-cloud-config-server</artifactId>-->
     <!--</dependency>-->
 

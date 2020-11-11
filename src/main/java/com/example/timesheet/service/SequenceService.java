@@ -10,19 +10,16 @@ import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
-import javax.sound.midi.InvalidMidiDataException;
 
-//import org.springframework.data.mongodb.repository.Query;
 @Service
 public class SequenceService {
   @Autowired
   private MongoOperations mongoOperation;
-  //@Autowired
-  Sequence sequence;
+
 
   public Double getNextSequenceId() {
     Double key = null;
-    //get sequence id
+
     Query query = new Query(Criteria.where("role_id").is(key));
 
     //increase sequence id by 1

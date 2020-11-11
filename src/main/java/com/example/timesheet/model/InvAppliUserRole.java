@@ -10,7 +10,7 @@ import org.springframework.data.annotation.Id;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-@Document(collection = "inv_appli_user_role")
+@Document(collection = "invAppliUserRole")
 public class InvAppliUserRole {
   @Id
   private String id;
