@@ -13,7 +13,6 @@ public interface ProjectRepository extends MongoRepository<Project, String> {
 
     @Query("{'idProject': ?0 }")
     Project findByIdProject(Double idProject);
-
     @Query("{'idProject': { $in: ?0 } }")
     List<Project> findByIdProjectIn(List<Double> pidProjectRoleActor);
 }
