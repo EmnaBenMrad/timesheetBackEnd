@@ -15,8 +15,11 @@
   <description>Demo project for Spring Boot</description>
 
   <properties>
-    <java.version>1.8</java.version>
-    <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
+      <java.version>1.8</java.version>
+      <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
+      <sonar.projectKey>EmnaBenMrad_timesheetBackEnd</sonar.projectKey>
+      <sonar.organization>emnabenmrad</sonar.organization>
+      <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
 
   <dependencies>
