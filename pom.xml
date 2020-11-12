@@ -20,6 +20,7 @@
       <sonar.projectKey>EmnaBenMrad_timesheetBackEnd</sonar.projectKey>
       <sonar.organization>emnabenmrad</sonar.organization>
       <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+      <sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version>
   </properties>
 
   <dependencies>

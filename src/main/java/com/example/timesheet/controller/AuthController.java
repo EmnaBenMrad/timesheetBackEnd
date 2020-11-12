@@ -170,10 +170,13 @@ public class AuthController {
         if (!userbaseService.checkIfValidPassword(password, passwordConfirm)) {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Les mots de passe saisis ne sont pas identiques!");
             //throw new InvalidOldPasswordException();
-        }
-        Optional<Userbase> user = userbaseService.getUserByPasswordResetToken(token);
-        if (user.isPresent() && userbaseService.checkIfValidPassword(password, passwordConfirm)) {
-            userbaseService.changeUserPassword(user.get(), password);
+        } else if (password.isEmpty() && passwordConfirm.isEmpty()) {
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Entrer un mot de passe!");
+        } else {
+            Optional<Userbase> user = userbaseService.getUserByPasswordResetToken(token);
+            if (user.isPresent() && userbaseService.checkIfValidPassword(password, passwordConfirm)) {
+                userbaseService.changeUserPassword(user.get(), password);
+            }
         }
     }
 
